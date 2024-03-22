@@ -1,0 +1,58 @@
+@use "header";
+
+
+#content {
+    // background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+.links-container {
+    width: 80%;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.link-container {
+    background-color: red;
+    margin: 5px;
+    width: calc(100% - 10px);
+    height: 5rem;
+    background-size: cover;
+    a{
+        display:block;
+        height:100%;
+        width: 100%;
+        background: rgba(121, 121, 121, 0.137);
+        text-decoration: none;
+        color:black;
+
+        p{
+        font-family: "Roboto";
+
+            background-color: white;
+            display:inline;
+            padding: .2rem .5rem;
+            border-radius: 5px;
+        }
+    }
+}
+
+
+@media screen and (min-width:520px) {
+
+
+    .link-container {
+        background-color: red;
+        margin: 5px;
+        width: calc(50% - 10px);
+        height: 10rem;
+    }
+}

@@ -1,0 +1,37 @@
+#modal {
+  transition: translate 0s, opacity 0.1s linear;
+  &.hidden {
+    transition:  opacity 0.1s linear,transform 0s .1s !important;
+    transform:translate(100%);
+    opacity: 0;
+  }
+  &.shown {
+    transform: translate();
+    opacity: 1;
+  }
+  background-color: rgba(0, 0, 0, 0.274);
+  
+  z-index: 1000;
+  position: fixed;
+  inset: 0;
+  color: white;
+  .modal-content {
+    width: min-content;
+    padding: .4rem;
+    background-color: rgba(0, 0, 0, 0.911);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  img {
+
+
+    width: auto;
+    height: auto;
+    max-height: 20rem;
+    max-width: 20rem;
+    aspect-ratio: 1 / 1;
+  }
+}

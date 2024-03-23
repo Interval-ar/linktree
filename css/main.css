@@ -30,6 +30,11 @@ body {
   background: gray;
 }
 
+#main {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .z-index-content {
   z-index: 2;
   position: fixed;
@@ -67,9 +72,17 @@ header img {
 #content {
   color: #f1f1f1;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
+}
+#content h1 {
+  font-family: "roboto";
+  color: rgb(119, 119, 119);
+  width: -moz-min-content;
+  width: min-content;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0 1rem;
 }
 
 .links-container {
@@ -83,17 +96,32 @@ header img {
 }
 
 .link-container {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.3803921569);
   background-color: red;
   margin: 5px;
   width: calc(100% - 10px);
   height: 5rem;
   background-size: cover;
+  position: relative;
+}
+.link-container:hover a {
+  background-color: rgba(255, 255, 255, 0);
+}
+.link-container .show-more {
+  position: absolute;
+  color: black;
+  background-color: white;
+  margin: 0;
+  bottom: 0.2rem;
+  right: 0.2rem;
+  padding: 0.2rem 0.5rem;
 }
 .link-container a {
+  transition: background-color 0.3s;
   display: block;
   height: 100%;
   width: 100%;
-  background: rgba(121, 121, 121, 0.137);
+  background: rgba(46, 46, 46, 0.295);
   text-decoration: none;
   color: black;
 }
@@ -105,11 +133,45 @@ header img {
   border-radius: 5px;
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 800px) {
   .link-container {
     background-color: red;
     margin: 5px;
     width: calc(50% - 10px);
     height: 10rem;
   }
+}
+#modal {
+  transition: translate 0s, opacity 0.1s linear;
+  background-color: rgba(0, 0, 0, 0.274);
+  z-index: 1000;
+  position: fixed;
+  inset: 0;
+  color: white;
+}
+#modal.hidden {
+  transition: opacity 0.1s linear, transform 0s 0.1s !important;
+  transform: translate(100%);
+  opacity: 0;
+}
+#modal.shown {
+  transform: translate();
+  opacity: 1;
+}
+#modal .modal-content {
+  width: -moz-min-content;
+  width: min-content;
+  padding: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.911);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#modal img {
+  width: auto;
+  height: auto;
+  max-height: 20rem;
+  max-width: 20rem;
+  aspect-ratio: 1/1;
 }/*# sourceMappingURL=main.css.map */

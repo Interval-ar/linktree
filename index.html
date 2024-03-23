@@ -11,22 +11,28 @@
 </head>
 
 <body>
-    <div class="z-index-content">
+    <div class="z-index-content" id="main">
         <header>
             <div class="logo-container">
                 <img src="media/Logo-Interval-chico.svg" alt="logo" class="img-responsive">
-
+                
             </div>
-
         </header>
 
         <div id="content">
+            <h1>LinkTree</h1>
            
         </div>
 
     </div>
 
-
+    <div id="modal" class="hidden" onclick=hide_modal()>
+        
+        <div class="modal-content">
+            <img src="images/QR/interval.png" alt="">
+            <p>Escanea el codigo</p>
+        </div>
+    </div>
     <div class="video_container">
         <div id="bg-shade"></div>
         <video autoplay muted loop id="bg-video">

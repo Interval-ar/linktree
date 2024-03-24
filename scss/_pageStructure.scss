@@ -1,15 +1,18 @@
 @use "header";
 
 #content {
-  
-
   h1 {
+    z-index: 20;
+    position: absolute;
     font-family: "roboto";
     color: rgb(119, 119, 119);
     width: min-content;
     margin: 0 auto;
     background-color: white;
     padding: 0 1rem;
+    right: 0;
+    top: 0;
+    font-size: 0.8rem;
   }
   color: #f1f1f1;
   width: 100%;
@@ -35,7 +38,7 @@
     }
   }
   // border:1px solid white;
-  box-shadow: 0px 0px 0px 2px #ffffff61;
+  box-shadow: 0px 0px 0px 2px rgb(0 24 34 / 88%);
   background-color: red;
   margin: 5px;
   width: calc(100% - 10px);
@@ -43,11 +46,18 @@
   background-size: cover;
   position: relative;
   .show-more {
+    font-family: "roboto";
+    font-weight:bold;
+   height:2em;
+
     position: absolute;
     color: black;
-    background-color: white;
+    background-color: rgb(0 24 34 / 88%);
+    border-radius: 5px 5px 0px 0px ;
+
+    color: #a7a7a7;
     margin: 0;
-    bottom: 0.2rem;
+    bottom: 0rem;
     right: 0.2rem;
     padding: 0.2rem 0.5rem;
   }
@@ -62,21 +72,31 @@
     color: black;
 
     p {
-      font-family: "Roboto";
-
-      background-color: white;
+      font-family: Roboto;
+      background-color: rgb(0 24 34 / 88%);
       display: inline;
       padding: 0.2rem 0.5rem;
-      border-radius: 5px;
+      border-radius: 0px 0px 5px 5px;
+      color: #a7a7a7;
+      font-weight: bold;
+      position: absolute;
+      right: 0.2rem;
+      top: 0rem;
+      margin: 0;
     }
   }
 }
 
 @media screen and (min-width: 800px) {
-  .link-container {
-    background-color: red;
-    margin: 5px;
-    width: calc(50% - 10px);
-    height: 10rem;
+  #content {
+    .link-container {
+      background-color: red;
+      margin: 5px;
+      width: calc(50% - 10px);
+      height: 10rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
   }
 }
